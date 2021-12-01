@@ -4,14 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
     <com.example.customcard.CustomView
         android:id="@+id/custom_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:Image="@drawable/prof"
-        app:Text="Hello Anmol"
-        app:Description="Member of Technical Staff"
+        app:BrandName="Amway"
+        app:ProductName="Medicine"
+        app:ItemNumber="Item number"
+        app:Note="Great Product"
+        app:Price="2000"
         android:layout_centerInParent="true"
        />
 </RelativeLayout>

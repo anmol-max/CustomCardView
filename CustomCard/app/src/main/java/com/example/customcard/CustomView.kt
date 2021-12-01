@@ -12,30 +12,48 @@ class CustomView(context: Context, attrs: AttributeSet?) :
     CardView(context, attrs) {
     private val attributes: TypedArray
     private val imageView: ImageView
-    private val textView1: TextView
-    private val descView: TextView
+    private val brandName: TextView
+    private val productName: TextView
+    private val itemNumber:TextView
+    private val note:TextView
+    private val price:TextView
     var root: ViewGroup? = null
-    private fun setText(text: String?) {
-        textView1.text = text
+    private fun seBrandName(text: String?) {
+        brandName.text = text
     }
 
-    private fun setDescription(description: String?) {
-        descView.text = description
+    private fun setProdName(prodName: String?) {
+        productName.text = prodName
+    }
+    private fun setItemNum(item: String?){
+        itemNumber.text=item
+    }
+    private fun setNote(noteText:String?){
+        note.text=noteText
+    }
+    private fun setPrice(priceText:String?){
+        price.text=priceText
     }
 
     init {
         inflate(context, R.layout.custom_view, also { root = it })
         attributes = context.obtainStyledAttributes(attrs, R.styleable.CustomView)
         imageView = findViewById(R.id.image_view)
-        textView1 = findViewById(R.id.text_view)
-        descView = findViewById(R.id.text_view_description)
+        brandName = findViewById(R.id.textViewBrandName)
+        productName = findViewById(R.id.textViewProductName)
+        itemNumber=findViewById(R.id.textViewItemNumber)
+        note=findViewById(R.id.textViewNote)
+        price=findViewById(R.id.textViewPrice)
         imageView.setImageResource(
             attributes.getResourceId(
                 R.styleable.CustomView_Image,
                 R.color.black
             )
         )
-        setText(attributes.getString(R.styleable.CustomView_Text))
-        setDescription(attributes.getString(R.styleable.CustomView_Description))
+        seBrandName(attributes.getString(R.styleable.CustomView_BrandName))
+        setProdName(attributes.getString(R.styleable.CustomView_ProductName))
+        setItemNum(attributes.getString(R.styleable.CustomView_ItemNumber))
+        setNote(attributes.getString(R.styleable.CustomView_Note))
+        setPrice(attributes.getString(R.styleable.CustomView_Price))
     }
 }

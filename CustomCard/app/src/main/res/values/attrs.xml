@@ -2,8 +2,10 @@
 <resources>
     <declare-styleable name="CustomView">
         <attr name="Image" format="reference"/>
-        <attr name="Text"  format="string"/>
-        <attr name="Description" format="string"/>
-        <attr name="TextSize" format="integer"/>
+        <attr name="BrandName"  format="string"/>
+        <attr name="ProductName" format="string"/>
+        <attr name="ItemNumber" format="string"/>
+        <attr name="Note" format="string"/>
+        <attr name="Price" format="string"/>
     </declare-styleable>
 </resources>
